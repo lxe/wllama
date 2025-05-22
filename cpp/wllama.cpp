@@ -17,6 +17,7 @@
 #include "llama.h"
 #include "helpers/wcommon.h"
 #include "actions.hpp"
+#include "wllama-mtmd.hpp"
 
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
 
@@ -122,6 +123,8 @@ extern "C" const char *wllama_action(const char *name, const char *req_raw)
     // WLLAMA_ACTION(session_load)
     WLLAMA_ACTION(test_benchmark)
     WLLAMA_ACTION(test_perplexity)
+    // Multimodal actions
+    WLLAMA_MTMD_ACTIONS
 
     else
     {

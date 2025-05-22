@@ -21,6 +21,7 @@ For changelog, please visit [releases page](https://github.com/ngxson/wllama/rel
 - Can run inference directly on browser (using [WebAssembly SIMD](https://emscripten.org/docs/porting/simd.html)), no backend or GPU is needed!
 - No runtime dependency (see [package.json](./package.json))
 - High-level API: completions, embeddings
+- **Multimodal support**: Process images alongside text (see [multimodal guide](./guides/multimodal.md))
 - Low-level API: (de)tokenize, KV cache control, sampling control,...
 - Ability to split the model into smaller files and load them in parallel (same as `split` and `cat`)
 - Auto switch between single-thread and multi-thread build based on browser support

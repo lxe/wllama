@@ -11,13 +11,17 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 set(WLLAMA_SRC cpp/wllama.cpp
     cpp/actions.hpp
     cpp/glue.hpp
+    cpp/wllama-mtmd.hpp
     cpp/helpers/wlog.cpp
     cpp/helpers/wcommon.cpp
     cpp/helpers/wsampling.cpp
-    llama.cpp/include/llama.h)
+    llama.cpp/include/llama.h
+    llama.cpp/examples/llava/mtmd.cpp
+    llama.cpp/examples/llava/clip.cpp)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/cpp)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/cpp/helpers)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/llama.cpp/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/llama.cpp/examples/llava)
 
 add_executable(wllama ${WLLAMA_SRC})
 target_link_libraries(wllama PRIVATE ggml llama ${CMAKE_THREAD_LIBS_INIT})
